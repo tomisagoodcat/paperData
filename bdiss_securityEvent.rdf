@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:foaf="http://xmlns.com/foaf/0."
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:dct="http://purl.org.dc/terms/"
+         xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+         xmlns:prov="http://ww.w3.org/ns/prov#"
+         xmlns:sem="http://semanticweb.cs.vu.nl/2009/11/sem/"
+         xmlns:geoname="http://www.geonames.org/ontology#"
+         xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:bdiss="http://bdiss.com/semantics#"
+         xmlns:so="http://www.schema.org"
+         xmlns:dbo="http://dbpedia.org/ontology/">
+        
+  <rdf:Description rdf:about="http://bdiss.com/semantics#Handler">
+    <rdfs:label>处理单位</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Actor"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://semanticweb.cs.vu.nl/2009/11/sem/EventType">
+    <skos:exactMatch rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#EventResult">
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#MainInCharge">
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/RoleType"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#AssistInCharge">
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/RoleType"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#Recognize">
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/RoleType"/>
+  </rdf:Description>
+
+  <org:Organization rdf:about="http://bdiss.com/semantics/Organization#police_dep">
+    <foaf:name>市公安局</foaf:name>
+  </org:Organization>
+
+  <org:Organization rdf:about="http://bdiss.com/semantics/Organization#police_dep_centre">
+    <foaf:name>地方公安机关科室</foaf:name>
+    <org:subOrganizationOf rdf:resource="http://bdiss.com/semantics/Organization#police_dep"/>
+  </org:Organization>
+
+  <org:Organization rdf:about="http://bdiss.com/semantics/Organization#police_info_centre">
+    <rdf:type rdf:resource="http://ww.w3.org/ns/prov#Agent"/>
+    <foaf:name>情报中心</foaf:name>
+    <org:subOrganizationOf rdf:resource="http://bdiss.com/semantics/Organization#police_dep_centre"/>
+  </org:Organization>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics/Organization#wfxq_p01">
+    <rdf:type rdf:resource="http://bdiss.com/semantics#Handler"/>
+    <foaf:name>文峰辖区派出所</foaf:name>
+    <org:subOrganizationOf rdf:resource="http://bdiss.com/semantics/Organization#police_dep"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics/Organization#zx_01">
+    <rdf:type rdf:resource="http://bdiss.com/semantics#Handler"/>
+    <foaf:name>调度中心</foaf:name>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics/Organization#ylxt_01">
+    <rdf:type rdf:resource="http://bdiss.com/semantics#Handler"/>
+    <foaf:name>D市医疗协调委员会</foaf:name>
+    <org:classification>
+      <skos:Concept rdf:about="http://bdiss.com/semantics/bdiss_concept#e_ylxt">
+        <skos:prefLabel>医疗纠纷人民调解委员会</skos:prefLabel>
+        <rdfs:seeAlso rdf:resource="https://baike.baidu.com/item/医疗纠纷人民调解委员会/12800026?fr=aladdin"/>
+        <skos:related>
+          <skos:Concept rdf:about="http://bdiss.com/semantics/bdiss_concept#e4">
+            <skos:prefLabel>医患纠纷</skos:prefLabel>
+            <skos:defition>医方(医疗机构)与患方(患者或者患者近亲属)之间的纠纷。包括:基于医疗过错争议产生的医疗纠纷、与医疗过错无关的其他医患纠纷。</skos:defition>
+            <rdfs:seeAlso rdf:resource="https://baike.baidu.com/item/医患纠纷"/>
+            <skos:board rdf:resource="http://bdiss.com/semantics/bdiss_concept#e"/>
+          </skos:Concept>
+        </skos:related>
+
+      </skos:Concept>
+    </org:classification>
+
+  </rdf:Description>
+
+  <org:Organization rdf:about="http://bdiss.com/semantics/Organization#local_big_data_office">
+    <rdf:type rdf:resource="http://ww.w3.org/ns/prov#Agent"/>
+    <rdf:type rdf:resource="http://bdiss.com/semantics#Handler"/>
+    <foaf:name>地方大数据局</foaf:name>
+  </org:Organization>
+
+  <org:Organization rdf:about="http://bdiss.com/semantics/Organization#bdi_whu">
+    <rdf:type rdf:resource="http://bdiss.com/semantics#Handler"/>
+    <rdf:type rdf:resource="http://ww.w3.org/ns/prov#Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+    <foaf:name>W大数据研究院</foaf:name>
+  </org:Organization>
+
+  <dcat:Catalog rdf:about="http://bdiss.com/semantics/IRM#SocietySecurity">
+    <dct:title>D市地区公共安全信息资源目录</dct:title>
+    <dcat:keyword>公共安全,政务,刑侦,统计</dcat:keyword>
+    <dcat:themeTaxonomy rdf:resource="http://bdiss.com/semantics/bdiss_concept#SocialSecurityScheme"/>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="http://bdiss.com/semantics/IRM#local_admin_dateset">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <dct:title>地方公共安全治理行政数据集合</dct:title>
+        <dcat:keyword>行政,公共安全</dcat:keyword>
+        <dcat:theme rdf:resource="http://bdiss.com/semantics/bdiss_concept#e"/>
+        <dcat:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-01</dcat:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-08-15</dct:modified>
+        <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/biweekly"/>
+        <dct:spatial rdf:resource="https://www.geonames.org/1811763"/>
+        <odrl:hasPolicy>
+          <odrl:Policy rdf:about="http://bdiss.com/semantics/policy#policy_001">
+            <dct:title>D市大数据局为地方脱敏刑侦数据制定的访问策略</dct:title>
+            <rdfs:comment>本数据集目前只提供学术研究使用，不允许对外传播</rdfs:comment>
+            <odrl:prohibiton>
+              <odrl:Prohibiton>
+                <rdfs:label>禁止传播</rdfs:label>
+                <odrl:action rdf:resource="http://www.w3.org/ns/odrl/2/distribution"/>
+                <odrl:target rdf:resource="http://bdiss.com/semantics/IRM#local_admin_S1-csv"/>
+                <odrl:assignee rdf:resource="http://bdiss.com/semantics/Organization#bdi_whu"/>
+                <odrl:assigner rdf:resource="http://bdiss.com/semantics/Organization#local_big_data_office"/>
+              </odrl:Prohibiton>
+            </odrl:prohibiton>
+
+            <odrl:permission>
+              <odrl:Permission>
+                <rdfs:label>允许使用</rdfs:label>
+                <odrl:action rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+                <odrl:constraint>
+                  <odrl:constraint>
+                    <odrl:leftOperand>dateTime</odrl:leftOperand>
+                    <odrl:rightOperand rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-31</odrl:rightOperand>
+                  </odrl:constraint>
+                </odrl:constraint>
+
+                <odrl:target rdf:resource="http://bdiss.com/semantics/IRM#local_admin_S1-csv"/>
+                <odrl:assignee rdf:resource="http://bdiss.com/semantics/Organization#bdi_whu"/>
+                <odrl:assigner rdf:resource="http://bdiss.com/semantics/Organization#local_big_data_office"/>
+              </odrl:Permission>
+            </odrl:permission>
+
+          </odrl:Policy>
+        </odrl:hasPolicy>
+
+        <dcat:distribution rdf:resource="http://bdiss.com/semantics/IRM#local_admin_S1-csv"/>
+      </dcat:Dataset>
+    </dcat:dataset>
+
+  </dcat:Catalog>
+
+  <dcat:Distribution rdf:about="http://bdiss.com/semantics/IRM#local_admin_S1-csv">
+    <dct:title>地方公共安全治理行政数据资源01</dct:title>
+    <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+    <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">512000.0</dcat:byteSize>
+  </dcat:Distribution>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#e6428288b">
+    <rdf:type rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+    <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+    <sem:hasPlace>
+      <sem:Place rdf:about="http://bdiss.com/semantics#p6428288">
+        <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+        <geoname:name>州医院急诊儿科</geoname:name>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.34</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.22</geo:long>
+      </sem:Place>
+    </sem:hasPlace>
+
+    <bdiss:stageType>发生阶段</bdiss:stageType>
+    <bdiss:stageType>评价阶段</bdiss:stageType>
+    <rdfs:commnet>在州医院急诊儿科小孩发烧抽筋因为床位不够医院不给救治,家属和医生打起来了</rdfs:commnet>
+    <sem:subEvent>
+      <sem:Event rdf:about="http://bdiss.com/semantics#e6428288b_01">
+        <rdfs:commnet>小孩发烧抽筋</rdfs:commnet>
+        <dbo:nextEvent rdf:resource="http://bdiss.com/semantics#e6428288b_02"/>
+      </sem:Event>
+    </sem:subEvent>
+
+    <sem:subEvent rdf:resource="http://bdiss.com/semantics#e6428288b_02"/>
+    <sem:subEvent rdf:resource="http://bdiss.com/semantics#e6428288b_03"/>
+    <dbo:nextEvent rdf:resource="http://bdiss.com/semantics#e6428288j"/>
+    <dbo:nextEvent>
+      <bdiss:EventResult rdf:about="http://bdiss.com/semantics#e6428288e">
+        <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+        <bdiss:stageType>结束</bdiss:stageType>
+        <bdiss:eventStatus>结案</bdiss:eventStatus>
+      </bdiss:EventResult>
+    </dbo:nextEvent>
+
+    <so:aggregateRating>
+      <so:AggregateRating>
+        <so:aggratingValue>3</so:agggratingValue>
+        <so:aggratingCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</so:aggratingCount >
+        <bdiss:method>打分</bdiss:method>
+      </so:AggregateRating>
+    </so:aggregateRating>
+
+  </rdf:Description>
+
+  <sem:Event rdf:about="http://bdiss.com/semantics#e6428288b_02">
+    <rdfs:commnet>因为床位不够医院不给救治</rdfs:commnet>
+    <dbo:cause rdf:resource="http://bdiss.com/semantics#e6428288b_03"/>
+  </sem:Event>
+
+  <sem:Event rdf:about="http://bdiss.com/semantics#e6428288b_03">
+    <rdfs:commnet>家属和医生打起来了</rdfs:commnet>
+  </sem:Event>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#r6428288c">
+    <rdf:type rdf:resource="http://eventKG.l3s.uni-hannover.de/schema/Relation"/>
+    <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+    <bdiss:stageType>识别</bdiss:stageType>
+    <sem:RoleType rdf:resource="http://bdiss.com/semantics#Recognize"/>
+    <rdf:object rdf:resource="http://bdiss.com/semantics#e6428288b"/>
+    <rdf:subject rdf:resource="http://bdiss.com/semantics/Organization#zx_01"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#r6428288a">
+    <rdf:type rdf:resource="http://eventKG.l3s.uni-hannover.de/schema/Relation"/>
+    <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+    <bdiss:stageType>处理</bdiss:stageType>
+    <sem:RoleType rdf:resource="http://bdiss.com/semantics#MainInCharge"/>
+    <rdf:object rdf:resource="http://bdiss.com/semantics#e6428288b"/>
+    <rdf:subject rdf:resource="http://bdiss.com/semantics/Organization#wfxq_p01"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://bdiss.com/semantics#r6428288m">
+    <rdf:type rdf:resource="http://eventKG.l3s.uni-hannover.de/schema/Relation"/>
+    <prov:wasGeneratedBy rdf:resource="http://bdiss.com/semantics#ETLActivity_0221"/>
+    <bdiss:stageType>处理</bdiss:stageType>
+    <sem:RoleType rdf:resource="http://bdiss.com/semantics#AssistInCharge"/>
+    <rdf:object rdf:resource="http://bdiss.com/semantics#e6428288b"/>
+    <rdf:subject rdf:resource="http://bdiss.com/semantics/Organization#ylxt_01"/>
+  </rdf:Description>
+
+  <prov:Activity rdf:about="http://bdiss.com/semantics#ETLActivity_0221">
+    <rdfs:lable>面向脱敏数据集ETL活动</rdfs:lable>
+    <prov:startedAtTime>2019-08-12T01:01:01Z</prov:startedAtTime>
+    <prov:endedAtTime>2019-08-12T02:02:02Z</prov:endedAtTime>
+    <prov:wasAssociatedWith rdf:resource="http://bdiss.com/semantics/Organization#bdi_whu"/>
+    <prov:used rdf:resource="http://bdiss.com/semantics/IRM#local_admin_S1-csv"/>
+  </prov:Activity>
+
+  <skos:Concept rdf:about="http://bdiss.com/semantics/bdiss_concept#e">
+    <skos:prefLabel>卫生计生</skos:prefLabel>
+    <skos:definition>有关卫生计生、食品药品监管方面的事务。包括:公共卫生、食品药品监管、医政监管、医患纠纷、人口计生等(主要涉及卫生计生、食品药品监管等部门的职能)。</skos:definition>
+    <skos:inScheme rdf:resource="http://bdiss.com/semantics/bdiss_concept#SocialSecurityScheme"/>
+  </skos:Concept>
+
+  <skos:ConceptScheme rdf:about="http://bdiss.com/semantics/bdiss_concept#SocialSecurityScheme">
+    <skos:prefLabel>公共安全</skos:prefLabel>
+    <skos:definition> 所谓公共安全，是指社会和公民个人从事和进行正常的生活、工作、学习、娱乐和交往所需要的稳定的外部环境和秩序。</skos:definition>
+    <skos:seeAlso rdf:resource="https://baike.baidu.com/item/公共安全"/>
+  </skos:ConceptScheme>
+
+</rdf:RDF>
